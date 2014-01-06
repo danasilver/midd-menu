@@ -1,8 +1,7 @@
 {
   "name": "midd-menu-api",
-  "description": "An REST API for menus.middlebury.edu.",
-  "main": "app.js",
-  "version": "1.1.0",
+  "description": "The Middlebury College dining menu, rebooted.",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "express": "3.4.7",
@@ -13,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danasilver/midd-menu-api.git"
+    "url": "https://github.com/danasilver/midd-menu.git"
   },
-  "author": "Dana Silver",
+  "author": "Dana Silver <dsilver@middlebury.edu>",
   "engines": {
     "node": "0.10.x"
   }

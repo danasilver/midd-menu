@@ -1,0 +1,9 @@
+{
+  'curly': true,    // Require {} for every new block or scope
+  'eqeqeq': true,   // Require triple equals (===) for comparison
+  'indent': 4,      // Require 4 space indents
+  'sub': true,      // Tolerate using `[]` notation when it can still be expressed in dot notation
+  'undef': true     // Require all non-global variables to be declared (prevents global leaks)
+  'eqnull': true    // Tolerate use of `== null`
+  'node': true      // Node.js
+}

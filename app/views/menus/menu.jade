@@ -1,0 +1,68 @@
+extends ../layouts/default
+
+block content
+  .row
+    .col-md-3
+      .sidebar.hidden-print
+        h3(style='text-align:center') Midd Menu for
+        h3.date(style='text-align:center') #{displayDate}
+        .btn-group
+          button.btn.btn-default(type='button') Previous
+          button.btn.btn-default(type='button') Next
+    .col-md-9.menu
+      h3.location Atwater
+      ul.location.row.list-unstyled
+        li.meal.col-md-4
+          h4 Breakfast
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.atwater.breakfast
+              li.menu-item #{item}
+        li.meal.col-md-4
+          h4 Lunch
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.atwater.lunch
+              li.menu-item #{item}
+
+      h3.location Proctor
+      ul.location.row.list-unstyled
+        li.meal.col-md-4
+          h4 Breakfast
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.proctor.breakfast
+              li.menu-item #{item}
+        li.meal.col-md-4
+          h4 Lunch
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.proctor.lunch
+              li.menu-item #{item}
+        li.meal.col-md-4
+          h4 Dinner
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.proctor.dinner
+              li.menu-item #{item}
+
+      h3.location Ross
+      ul.location.row.list-unstyled
+        li.meal.col-md-4
+          h4 Breakfast
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.ross.breakfast
+              li.menu-item #{item}
+        li.meal.col-md-4
+          h4 Lunch
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.ross.lunch
+              li.menu-item #{item}
+        li.meal.col-md-4 
+          h4 Dinner
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.ross.dinner
+              li.menu-item #{item}
+
+      h3.location Language Tables
+      ul.location.row.list-unstyled
+        li.meal.col-md-4.col-md-offset-4
+          h4 Lunch
+          ul.menu-list.list-unstyled
+            each item in menu.dining_halls.language_tables.lunch
+              li.menu-item #{item}

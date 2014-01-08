@@ -1,6 +1,10 @@
 {
-  "name": "midd-menu-api",
+  "name": "midd-menu",
   "description": "The Middlebury College dining menu, rebooted.",
+  "keywords": [
+    "menu",
+    "middlebury"
+  ],
   "version": "0.0.1",
   "private": true,
   "repository": {
@@ -17,7 +21,10 @@
     "request": "~2.30.0",
     "cheerio": "~0.12.4",
     "mongoose": "~3.8.2",
-    "newrelic": "~1.2.0"
+    "newrelic": "~1.2.0",
+    "view-helpers": "~0.1.4",
+    "jade": "~1.0.2",
+    "moment": "~2.5.0"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

@@ -1,34 +1,28 @@
 var mongoose = require('mongoose'),
+    utils = require('../../lib/utils'),
     Schema = mongoose.Schema;
 
-var menuSchema = new Schema({
+var MenuSchema = new Schema({
     date: String,
     dining_halls: {
         atwater: {
-            breakfast: Array,
-            lunch: Array
+            breakfast: { type: [], default: '', trim: true },
+            lunch: { type: [], default: '', trim: true }
         },
         proctor: {
-            breakfast: Array,
-            lunch: Array,
-            dinner: Array
+            breakfast: { type: [], default: '', trim: true },
+            lunch: { type: [], default: '', trim: true },
+            dinner: { type: [], default: '', trim: true }
         },
         ross: {
-            breakfast: Array,
-            lunch: Array,
-            dinner: Array
+            breakfast: { type: [], default: '', trim: true },
+            lunch: { type: [], default: '', trim: true },
+            dinner: { type: [], default: '', trim: true }
         },
         language_tables: {
-            lunch: Array
+            lunch: { type: [], default: '', trim: true }
         }
     }
 });
 
-if (!menuSchema.options.toObject) menuSchema.options.toObject = {};
-
-menuSchema.options.toObject.transform = function(doc, ret, options) {
-    delete ret._id;
-    delete ret.__v;
-}
-
-module.exports = mongoose.model('Menu', menuSchema);
+mongoose.model('Menu', MenuSchema);

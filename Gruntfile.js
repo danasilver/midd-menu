@@ -37,13 +37,16 @@ module.exports = function(grunt) {
       def: {
         options: {
           file: 'server.js',
-          nodeArgs: ['--debug']
+          nodeArgs: ['--debug'],
+          env: {
+            PORT: '5000'
+          }
         }
       }
     },
     watch: {
-      files: ['*.js', '*.less'],
-      tasks: ['jshint', 'uglify', 'less', 'nodemon']
+      files: ['*'],
+      tasks: ['jshint', 'uglify', 'less:development', 'nodemon']
     }
   });
 
@@ -53,5 +56,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-nodemon');
 
-  grunt.registerTask('default', ['jshint', 'uglify', 'less'])
+  grunt.registerTask('default', ['jshint', 'uglify', 'less']);
+
+  grunt.registerTask('watch', ['jshint', 'uglify', 'less:development', 'nodemon']);
 };
